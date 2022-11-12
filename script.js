@@ -1,16 +1,14 @@
-
-function elemCreator(tagName, callback) { 
-    const element = document.createElement(tagName); 
-    const innerText = document.createTextNode("Heeeey"); 
-    element.appendChild(innerText); 
-    document.body.appendChild(element); 
-   
-    callback(element); 
-  } 
-   
-  elemCreator("div", function (elem) { 
-    elem.style.backgroundColor = "#f28073"; 
-    elem.style.padding="100px"
-    elem.style.width="fit-content"
-    elem.style.borderRadius="16PX"
-  });
+let result = 0;
+function counterMaker() {
+  return function (val = 0) {
+    return (result += val);
+  };
+}
+const counter = counterMaker();
+console.log(counter());
+console.log(counter());
+console.log(counter(1));
+console.log(counter());
+console.log(counter(3));
+console.log(counter(7));
+console.log(counter(-5));
