@@ -1,53 +1,125 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-.grid {
-    margin: 5px auto 30px;
-    max-width: 850px;
-    max-height: 550px;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 60px;
-
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.grid div:nth-child(1) {
-    grid-area: 1/1/2/2;
-}
-
-.grid div:nth-child(2) {
-    grid-area: 2/1/4/2;
-}
-
-.grid div:nth-child(3) {
-    grid-area: 1/2/3/3;
-}
-
-.grid div:nth-child(4) {
-    grid-area: 3/2/4/3;
-}
-
-.grid div:nth-child(5) {
-    grid-area: 1/3/2/4;
-}
-
-.grid div:nth-child(6) {
-    grid-area: 2/3/4/4;
-}
-
-.grid div:nth-child(7) {
-    grid-area: 1/4/3/5;
-}
-
-.grid div:nth-child(8) {
-    grid-area: 3/4/4/5;
-}
+  }
+  .innerSection {
+    text-align: center;
+    display: block;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .backgroundDark {
+    background-color: rgb(29, 25, 25);
+    color: #e5e4e4;
+  }
+  
+  .backgroundLight {
+    background-color: #e6e5e5;
+    color: #444444;
+    padding-bottom: 40px;
+  }
+  
+  div:first-of-type {
+    padding-top: 30px;
+  }
+  
+  h1 {
+    margin-bottom: 16px;
+  }
+  
+  button {
+    margin: 16px auto 50px auto;
+    padding: 12px 14px;
+    background-color: rgb(29, 25, 25);
+    color: white;
+    border: 1px solid #414040;
+    border-radius: 0px;
+  }
+  
+  .webDevelopmentSection,
+  .featuresSection,
+  .lastSection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .webDevelopmentSection p {
+    width: calc(50% - 16px);
+    margin: 8px;
+  }
+  
+  .features {
+    background-color: white;
+    color: black;
+    width: calc(33% - 16px);
+    margin: 8px;
+    padding: 30px 26px 26px 26px;
+  }
+  
+  .features .title {
+    margin-bottom: 22px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .lastSection div {
+    width: calc(50%);
+    /* margin: 8px; */
+  }
+  
+  .contactUs {
+    background: #3e84f3;
+    color: white;
+    text-align: center;
+    padding: 30px 24px;
+  }
+  
+  .contactUs .title {
+    margin-bottom: 22px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .aboutUs{
+      background-color: rgb(29, 25, 25);
+      color: #e5e4e4;
+      text-align: center;
+      padding: 30px 24px;
+    }
+  
+    .aboutUs .title {
+      margin-bottom: 22px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  
+    footer{
+        display: flex;
+        justify-content:space-around;
+        padding: 24px;
+        background: black;
+        color: #e5e4e4;;
+    }
+  
+    footer span{
+        color:#3e84f3;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .features {
+            width: calc(100% - 16px);
+        }
+        .lastSection div {
+            width: calc(100%);
+            /* margin: 8px; */
+        }
+        .webDevelopmentSection p {
+            width: calc(100% - 16px);
+            margin: 8px;
+        }
+        .innerSection {
+            padding: 0 12px;
+        }
+      }
